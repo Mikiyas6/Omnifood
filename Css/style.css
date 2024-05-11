@@ -1,0 +1,672 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+
+- Letter spacing
+-0.5px
+0.75px
+
+--- 02 COLORS
+
+- Primary: #e67e22
+- Tints:
+#fdf2e9
+#fae5d3
+#eb984e
+
+- Shades: 
+#cf711f
+#45260a
+
+- Accents:
+- Grays
+
+#888
+#767676 (lightest grey allowed on #fff)
+#6f6f6f (lightest grey allowed on #fdf2e9)
+#555
+#333
+
+--- 05 SHADOWS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 06 BORDER-RADIUS
+
+Default: 9px
+Medium: 11px
+
+--- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+html {
+  font-size: 62.5%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden !important;
+}
+body {
+  /* Default font-family for the whole page */
+  font-family: "Rubik", sans-serif;
+  /* Default line-height */
+  line-height: 1;
+  /* Default font-weight */
+  font-weight: 400;
+  /* Default color for texts and other things on the webpage */
+  color: #555;
+}
+
+/* ********************************  */
+/* HEADER */
+/* ******************************** */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fdf2e9;
+  padding: 0 4.8rem;
+  height: 9.6rem;
+  position: relative;
+}
+.omnifood-logo {
+  height: 2.2rem;
+}
+.main-nav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 4.8rem;
+}
+.main-nav-link:link,
+.main-nav-link:visited {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f;
+}
+.nav-cta:link,
+.nav-cta:visited {
+  display: inline-block;
+  padding: 1.2rem 2.4rem;
+  background-color: #e67e22;
+  color: #fff;
+  border-radius: 9px;
+  transition: all 0.3s;
+}
+.nav-cta:hover,
+.nav-cta:active {
+  background-color: #cf711f;
+}
+/* MOBILE */
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
+
+/* STICKY NAVIGATION */
+.sticky .header {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  z-index: 999;
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+
+/* ******************************************************************* */
+
+/* ********************************  */
+/* HERO SECTION */
+/* ******************************** */
+
+.section-hero {
+  background-color: #fdf2e9;
+  padding: 4.8rem 0 9.6rem 0;
+}
+.hero {
+  display: grid;
+  max-width: 130rem;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9.6rem;
+  align-items: center;
+  padding: 0 4.8rem;
+}
+.hero-description {
+  font-size: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4.8rem;
+  font-weight: 500;
+}
+
+.delivered-meals {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-top: 9.6rem;
+}
+.delivered-imgs {
+  display: flex;
+}
+.delivered-imgs img {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  margin-left: -1.5rem;
+  border: 3px solid #fdf2e9;
+}
+.delivered-text {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.delivered-text span {
+  color: #cf711f;
+  font-weight: 700;
+}
+.hero-img {
+  width: 100%;
+}
+
+/* ********************************  */
+/* FEATURED IN SECTION */
+/* ******************************** */
+.section-featured {
+  padding: 4.8rem 0;
+}
+.featured-img-box img {
+  filter: grayscale(100%);
+  opacity: 0.5;
+  width: 100%;
+}
+.section-featured .subheading {
+  color: #999;
+  text-align: center;
+  margin-bottom: 2.4rem;
+}
+/* ********************************  */
+/* HOW IT WORKS SECTION */
+/* ******************************** */
+
+.section-how {
+  padding: 9.6rem 0;
+}
+.step-numbers {
+  font-size: 8.6rem;
+  color: #ddd;
+  margin-bottom: 3.2rem;
+  font-weight: 700;
+}
+.step-description {
+  font-size: 2rem;
+  line-height: 1.8;
+  font-weight: 500;
+}
+.steps-app-img {
+  width: 35%;
+}
+.step-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.step-img-box::before {
+  width: 60%;
+  padding-bottom: 60%;
+  background-color: #fdf2e9;
+}
+.step-img-box::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: #fae5d3;
+}
+/* ********************************  */
+/* MEAL SECTION */
+/* ******************************** */
+.section-meals {
+  padding-bottom: 9.6rem;
+}
+.meals {
+  align-items: start;
+}
+.meal-title {
+  font-size: 2.7rem;
+}
+.meal-attributes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-size: 1.8rem;
+}
+.meal-attribute {
+  display: flex;
+  gap: 1.6rem;
+}
+.meal-pic {
+  width: 100%;
+}
+
+.tag--vegan,
+.tag--vegetarian {
+  background-color: #51cf66;
+}
+.tag--paleo {
+  background-color: #ffd43b;
+}
+.description {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+.diet-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: 2rem;
+}
+.diet {
+  display: flex;
+  gap: 1.8rem;
+}
+.all-recipes {
+  font-size: 1.8rem;
+  text-align: center;
+}
+/* ********************************  */
+/* TESTIMONIALS SECTION */
+/* ******************************** */
+
+.section-testimonials {
+  padding: 9.6rem 0;
+  background-color: #fdf2e9;
+}
+.testimonials-and-gallery {
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
+}
+.testimonial-img-box {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+}
+.testimonial-img {
+  width: 100%;
+}
+.testimonial-statement {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+.testimonial-name {
+  font-size: 1.6rem;
+  color: #6f6f6f;
+}
+.testimonials {
+  column-gap: 4.8rem;
+  row-gap: 4.4rem;
+}
+.left-side {
+  padding-left: 4.8rem;
+}
+/* ********************************  */
+/* GALLERY SECTION */
+/* ******************************** */
+.gallery {
+  padding-top: 1.6rem;
+  gap: 1.6rem;
+}
+.gallery-img-box {
+  overflow: hidden;
+}
+.gallery-img {
+  width: 100%;
+  transition: all 0.4s;
+}
+.gallery-img:hover {
+  transform: scale(1.1);
+}
+/* ********************************  */
+/* Pricing SECTION */
+/* ******************************** */
+.section-pricing {
+  padding: 9.6rem 0;
+}
+.pricing {
+  align-items: center;
+  gap: 6.4rem;
+  margin-bottom: 9.6rem;
+}
+.pricing-plan {
+  width: 75%;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  transition: all 0.7s;
+  overflow: hidden;
+}
+.pricing-plan:hover {
+  transform: scale(1.1);
+}
+.pricing-plan--starter {
+  padding: 4.6rem;
+  border: 2px solid #fdf2e9;
+  justify-self: end;
+}
+.pricing-plan--complete {
+  padding: 4.8rem;
+  background-color: #fae5d3;
+  position: relative;
+}
+.pricing-plan--complete::after {
+  content: "best value";
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: 700;
+  background-color: #ffd43b;
+  padding: 1rem 4rem;
+  text-align: center;
+  position: absolute;
+  top: 3rem;
+  right: -4rem;
+  transform: rotate(45deg);
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+.plan-name {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+.price {
+  font-size: 7.4rem;
+  line-height: 1.2;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
+.price span {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 500;
+  margin-right: 0.2rem;
+}
+.pricing-description {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #777;
+  margin-bottom: 3rem;
+}
+.pricing-features {
+  gap: 2.4rem;
+}
+.pricing-features span {
+  font-size: 2rem;
+}
+.plan-sign-up {
+  text-align: center;
+  margin-top: 4.8rem;
+}
+.plan-detail {
+  text-align: center;
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #333;
+}
+/* ********************************  */
+/* FEATURES SECTION */
+/* ******************************** */
+.section-features {
+  padding: 4.8rem 0;
+}
+.features {
+  gap: 3.2rem;
+}
+.feature-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+  background-color: #fdf2e9;
+  padding: 1.6rem;
+  text-align: center;
+  border-radius: 50%;
+  margin-bottom: 3.2rem;
+}
+.feature-heading {
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+.feature-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #555;
+}
+/* ********************************  */
+/* CALL TO ACTION SECTION */
+/* ******************************** */
+.section-call-to-action {
+  padding: 9.6rem 0;
+}
+.call-to-action {
+  grid-template-columns: 2fr 1fr;
+  column-gap: 0;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+  background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
+}
+.call-to-action-form-box {
+  padding: 4.8rem 6.4rem;
+}
+.call-to-action-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url(/Omnifood/img/eating.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.call-to-action-introduction {
+  margin-bottom: 6.4rem;
+}
+.call-to-action-header {
+  font-size: 4.8rem;
+  margin-bottom: 3.6rem;
+  color: #45260a;
+}
+.call-to-action-description {
+  font-size: 2rem;
+  line-height: 1.8;
+  color: #45260a;
+}
+.call-to-action-form {
+  gap: 4rem;
+}
+
+.input-field--option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.call-to-action-form label {
+  font-size: 1.8rem;
+  color: #45260a;
+  margin-bottom: 0rem;
+  font-weight: 500;
+}
+
+.call-to-action-form input,
+.call-to-action-form select {
+  border: none;
+  padding: 2rem 2rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  background-color: #fdf2e9;
+}
+.call-to-action-form input::placeholder {
+  columns: #aaa;
+}
+.call-to-action *:focus {
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
+}
+/* ********************************  */
+/* Footer SECTION */
+/* ******************************** */
+.section-footer {
+  margin-top: 4.8rem;
+  padding: 9.6rem 0;
+  border-top: 1px solid #ddd;
+}
+.footer {
+  grid-template-columns: 2fr 2fr 1fr 1fr 1fr;
+  column-gap: 4.8rem;
+  max-width: 138rem;
+}
+.footer-logo-col,
+.footer-address-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.logo--footer {
+  display: inline-block;
+  margin-bottom: 2.4rem;
+}
+.contact-details {
+  margin-top: auto;
+}
+.icon-social-media {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.social-media {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  gap: 2.4rem;
+}
+.copy-right {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #767676;
+  margin-top: auto;
+}
+.footer-title {
+  font-size: 2rem;
+  color: #333;
+  font-weight: 700;
+  font-style: normal;
+  margin-bottom: 2rem;
+}
+.phone-number,
+.email,
+.address {
+  font-style: normal;
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #333;
+}
+.address {
+  font-weight: 500;
+}
+.phone-number,
+.email {
+  display: block;
+  text-decoration: none;
+}
+
+.accounts,
+.companies,
+.resources {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 3.2rem;
+}
+.footer-link:link,
+.footer-link:visited {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #767676;
+  transition: all 0.3s;
+}
+.footer-link:hover,
+.footer-link:active {
+  color: #444;
+}

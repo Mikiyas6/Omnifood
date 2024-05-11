@@ -1,0 +1,459 @@
+/* - Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+/*  -> we always use em for media queries*/
+
+/* ********************************  */
+/* For Small Laptops(Below 1366px) ->  1366px/16px = 85.375em */
+/* ******************************** */
+
+/* Note 
+
+Let's just say that you wrote the following. 
+
+###########################
+@media (max-width: 60em) {
+  8px/16px =  0.5
+  html {
+    font-size: 50%;}
+######################## 
+
+ You might not see a break at 960px and maybe not for 900px. But a media query should atleast work for 200-300px range. 
+Which in our case, it is 760px minimum. As soo as you write the above, go and check the 200px range and work from there */
+@media (max-width: 85.375em) {
+  .hero {
+    max-width: 120rem;
+  }
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .testimonials {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* ********************************  */
+/* For Landscape Tablets(Below 1200px) ->  1200px/16px = 75em */
+/* ******************************** */
+@media (max-width: 75em) {
+  /* 9px/16px =  0.5625*/
+  /* font-size Adjustment */
+  html {
+    font-size: 56.25%;
+  }
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+  .hero-description,
+  .btn,
+  .btn:link,
+  .btn:visited,
+  .step-description,
+  .footer-title,
+  .pricing-features span,
+  .plan-detail,
+  .call-to-action-description {
+    font-size: 1.8rem;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited,
+  .meal-attribute span,
+  .delivered-text,
+  .copy-right,
+  .phone-number,
+  .email,
+  .address,
+  .footer-link:link,
+  .footer-link:visited,
+  .feature-description,
+  .call-to-action-form label,
+  .call-to-action-form input,
+  .call-to-action-form select {
+    font-size: 1.6rem;
+  }
+  .tag,
+  .subheading,
+  .pricing-description {
+    font-size: 1.4rem;
+  }
+  .call-to-action-header {
+    font-size: 4.6rem;
+  }
+  .feature-heading {
+    font-size: 2.2rem;
+  }
+  .step-numbers {
+    font-size: 7.4rem;
+  }
+  .price span {
+    font-size: 2.8rem;
+  }
+  /* Padding,, Margin and gap Adjustment */
+  .heading-secondary {
+    margin-bottom: 6.2rem;
+  }
+  .grid {
+    column-gap: 4.8rem;
+    row-gap: 6.4rem;
+  }
+  .section-header {
+    padding: 0 3.2rem;
+  }
+  .hero {
+    gap: 4.8rem;
+  }
+  .description {
+    padding: 2rem 2.8rem;
+  }
+  .meal-title {
+    margin-bottom: 2.4rem;
+  }
+
+  .main-nav-list {
+    gap: 3.2rem;
+  }
+  .pricing-plan {
+    padding: 3rem;
+  }
+  .section-testimonials {
+    padding: 9.6rem 3.2rem;
+  }
+  .pricing-plan {
+    padding: 3rem;
+  }
+}
+/* ********************************  */
+/* For Tablet(Below 960px) ->  960px/16px = 60em */
+/* ******************************** */
+@media (max-width: 60em) {
+  /* 8px/16px =  0.5*/
+  /* font-size Adjustment */
+  html {
+    font-size: 50%;
+  }
+  /* Changing Two or more columns to only One column */
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+  .hero-text-box,
+  .hero-img-box {
+    text-align: center;
+  }
+  .hero-img {
+    width: 60%;
+  }
+  .delivered-meals {
+    justify-content: center;
+    margin-top: 3.2rem;
+  }
+  .how-it-works-header {
+    text-align: center;
+  }
+  .meal-title {
+    font-size: 2.3rem;
+  }
+  .diet-list {
+    gap: 1.8rem;
+    font-size: 1.6rem;
+  }
+  .section-testimonials {
+    padding-bottom: 0;
+  }
+  .testimonials-and-gallery {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.6rem;
+  }
+  .testimonials {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .call-to-action {
+    grid-template-columns: 3fr 2fr;
+    gap: 0;
+  }
+  .call-to-action-form-box {
+    padding: 4rem;
+  }
+  .call-to-action-header {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+  .call-to-action-form {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+  .call-to-action-introduction {
+    margin-bottom: 4.8rem;
+  }
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+
+  .main-nav {
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+
+    /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
+
+    /* 1) Hide it visually */
+    opacity: 0;
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none;
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    display: none;
+  }
+
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+  }
+}
+
+/* ********************************  */
+/* For Small-Tablets(Below 760px) ->  760px/16px = 47.5em */
+/* ******************************** */
+@media (max-width: 47.5em) {
+  /* 7px/16px =  0.4375*/
+  html {
+    font-size: 43.75%;
+  }
+  .how-it-works,
+  .meals,
+  .pricing,
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+  }
+  .diets {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+  .pricing-plan--starter,
+  .pricing-plan--complete {
+    padding: 3rem;
+    width: 100%;
+  }
+  .section-pricing,
+  .section-features,
+  .section-call-to-action {
+    padding-bottom: 4.8rem;
+  }
+  .section-call-to-action {
+    padding-top: 4.8rem;
+  }
+  .call-to-action {
+    grid-template-columns: 1fr;
+  }
+  .call-to-action-img-box {
+    grid-row: 1;
+    height: 40rem;
+  }
+  .meal-cards--first {
+    justify-self: end;
+    width: 65%;
+  }
+  .meal-cards--second {
+    justify-self: start;
+    width: 65%;
+  }
+  .footer {
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 4.8rem;
+  }
+  .footer-nav {
+    /* Make them sit on the first row */
+    grid-row: 1;
+    /* Make each cell span 2 cells */
+    grid-column: span 2;
+  }
+  .footer-logo-col,
+  .footer-address-col {
+    /* Make them sit on the second row */
+    grid-row: 2;
+    /* Make each cell span 3 cells */
+    grid-column: span 3;
+  }
+}
+/* ********************************  */
+/* For Phones(Below 560px) ->  560px/16px = 35em */
+/* ******************************** */
+@media (max-width: 35em) {
+  /* 6px/16px =  37.5*/
+  html {
+    font-size: 37.5%;
+  }
+  .hero {
+    padding: 0 3.2rem;
+  }
+  .how-it-works,
+  .meals,
+  .pricing,
+  .features {
+    grid-template-columns: 1fr;
+  }
+  .heading-primary {
+    font-size: 3.2rem;
+  }
+  .heading-secondary {
+    font-size: 2.6rem;
+  }
+  .meal-cards--first,
+  .meal-cards--second {
+    justify-self: center;
+  }
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .pricing-plan--starter,
+  .pricing-plan--complete {
+    justify-self: center;
+  }
+  .section-meals .subheading,
+  .section-meals .heading-secondary {
+    text-align: left;
+  }
+  .featured-in {
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+  .section-how {
+    padding: 3.6rem 0;
+  }
+  .pricing {
+    width: 80%;
+  }
+  .hero-text-box .btn {
+    padding: 2rem 4rem;
+  }
+  .hero-img {
+    width: 80%;
+  }
+  .step-img-box--1 {
+    grid-row: 1;
+  }
+  .step-img-box--3 {
+    grid-row: 5;
+  }
+  .section-meals {
+    padding: 4.8rem 0;
+  }
+  .step-img-box {
+    transform: translateY(5rem);
+  }
+}
+/* 
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/**************************/
+/* Fixing Safari flexbox gap */
+/**************************/
+
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  margin-right: 4.8rem;
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .delivered-faces {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.no-flexbox-gap .meal-icon {
+  margin-right: 1.6rem;
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  margin-right: 6.4rem;
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  margin-right: 2.4rem;
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  margin-bottom: 2.4rem;
+}
+
+@media (max-width: 75em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 3.2rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 4.8rem;
+  }
+}
